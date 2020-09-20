@@ -20,4 +20,17 @@ public class ConsoleDataAcquirer implements DataAcquirer {
 
         return num;
     }
+
+    // TODO: 19.09.2020 don`t work
+    /*
+    @Override
+    public double getNumber(String str) {
+        System.out.printf("Input %s: %n", str);
+        try (Scanner scanner = new Scanner(System.in);) {
+            double value = scanner.nextDouble();
+            scanner.nextLine();
+
+            return value;
+        }
+    }*/
 }
