@@ -50,7 +50,6 @@ public class Point {
         return Math.abs(numberA - numberB) < DELTA;
     }
 
-
     @Override
     public int hashCode() {
         return Long.valueOf(Double.doubleToLongBits(coordinateX)).hashCode() +

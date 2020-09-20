@@ -5,32 +5,18 @@ import java.util.Scanner;
 public class ConsoleDataAcquirer implements DataAcquirer {
 
     @Override
-    public double getNumber(String str) {
+    public String[] getData() {
 
-        double num;
-        Scanner in = new Scanner(System.in);
-        System.out.printf("Input %s: %n", str);
+        String[] input = new String[3];
+        Scanner scanner = new Scanner(System.in);
 
-        while (!in.hasNextDouble()) {
-            System.out.println("That not a number!");
-            in.next(); // this is important!
-            System.out.printf("Input %s: %n", str);
-        }
-        num = in.nextDouble();
+        System.out.println("Enter number a:");
+        input[0] = scanner.nextLine();
+        System.out.println("Enter number b:");
+        input[1] = scanner.nextLine();
+        System.out.println("Enter step:");
+        input[2] = scanner.nextLine();
 
-        return num;
+        return input;
     }
-
-    // TODO: 19.09.2020 don`t work
-    /*
-    @Override
-    public double getNumber(String str) {
-        System.out.printf("Input %s: %n", str);
-        try (Scanner scanner = new Scanner(System.in);) {
-            double value = scanner.nextDouble();
-            scanner.nextLine();
-
-            return value;
-        }
-    }*/
 }
